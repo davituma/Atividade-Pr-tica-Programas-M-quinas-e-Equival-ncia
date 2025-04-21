@@ -1,17 +1,33 @@
 #include <stdio.h>
 
 int main() {
-    int n, i = 1, soma = 0;
-    printf("Digite um número: ");
-    scanf("%d", &n);
+    // Parâmetros
+    int times = 6, value = 2;
+    int dividend = 8, divisor = 2;
 
-inicio:
-    if (i <= n) {
-        soma += i;
-        i++;
-        goto inicio;
-    }
+    // Cálculo da multiplicação sem laços, apenas goto
+    int result_mul = 0;
+    int counter = 0;
 
-    printf("Soma = %d\n", soma);
+mul_start:
+    if (counter >= times) goto mul_end;
+    result_mul += value;
+    counter++;
+    goto mul_start;
+
+mul_end:
+    // Cálculo da divisão sem laços, apenas goto
+    int result_div = 0;
+
+div_start:
+    if (dividend < divisor) goto div_end;
+    dividend -= divisor;
+    result_div++;
+    goto div_start;
+
+div_end:
+    // Impressão dos resultados
+    printf("Multiplicação monolítica: %d * %d = %d\n", times, value, result_mul);
+    printf("Divisão monolítica: %d / %d = %d\n", 8, 2, result_div);
     return 0;
 }
