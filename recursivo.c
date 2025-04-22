@@ -1,7 +1,5 @@
 #include <stdio.h>
 
-// R(times, value): retorna times * value via soma recursiva
-// Pré-condição: times, value ≥ 0
 int multiply_rec(int times, int value) {
     if (times == 0) {
         return 0;
@@ -10,8 +8,6 @@ int multiply_rec(int times, int value) {
     return previous + value;
 }
 
-// D(dividend, divisor): retorna dividend / divisor (divisão inteira) via subtração recursiva
-// Pré-condição: dividend, divisor ≥ 1
 int divide_rec(int dividend, int divisor) {
     if (dividend < divisor) {
         return 0;

@@ -1,8 +1,5 @@
 #include <stdio.h>
 
-// multiply_iter(times, value): times * value via laço for
-// divide_iter(dividend, divisor): divisão inteira via laço while
-
 int multiply_iter(int times, int value) {
     int result = 0;
     for (int i = 0; i < times; i++) {
